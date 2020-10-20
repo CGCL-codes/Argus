@@ -29,12 +29,12 @@ We implement Argus on top of [RDMA-Spark](http://hibd.cse.ohio-state.edu/#spark)
 
 ## Building Argus
 
-Download the source code of [Spark 2.1.0](https://github.com/apache/spark/tree/branch-2.1). And download our implementation code from the path core/src/. Replace corresponding source file of Spark with our code. Then, building the core module with the following command:
+Download the source code of [Spark 2.1.0](https://github.com/apache/spark/tree/branch-2.1). And download our implementation code from the path core/. Replace corresponding source file of Spark with our code. Then, building the core module with the following command:
 ```
 ./build/mvn -Pyarn -Phadoop-2.7 -Dhadoop.version=2.7.3 -Phive -Phive-thriftserver -DskipTests clean package -pl core
 ```
 
-For ease of use, one can also download the compiled jar file spark-core_2.11-2.1.0.jar from core/spark-core_2.11-2.1.0.jar.
+For ease of use, one can also download the compiled jar file spark-core_2.11-2.1.0.jar from core/target/spark-core_2.11-2.1.0.jar.
 
 ## Using Argus
 After building the core module, one can get spark-core_2.11-2.1.0.jar in terget file. Replace the same file in RDMA-Spark/jars/ with this file, and one can deploy the system refer to the RDMA-Spark document from [RDMA-Spark Userguide](http://hibd.cse.ohio-state.edu/static/media/rdma-spark/rdma-spark-0.9.5-userguide.pdf).
