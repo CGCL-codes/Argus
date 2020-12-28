@@ -38,3 +38,8 @@ For ease of use, one can also download the compiled jar file spark-core_2.11-2.1
 
 ## Using Argus
 After building the core module, one can get spark-core_2.11-2.1.0.jar in terget file. Replace the same file in RDMA-Spark/jars/ with this file, and one can deploy the system refer to the RDMA-Spark document from [RDMA-Spark Userguide](http://hibd.cse.ohio-state.edu/static/media/rdma-spark/rdma-spark-0.9.5-userguide.pdf).
+
+## Authors and Copyright
+Argus is developed in National Engineering Research Center for Big Data Technology and System, Cluster and Grid Computing Lab, Services Computing Technology and System Lab, School of Computer Science and Technology, Huazhong University of Science and Technology, Wuhan, China by Sijie Wu (wsj@hust.edu.cn), Hanhua Chen (chen@hust.edu.cn), Yonghui Wang (yhw@hust.edu.cn), Hai Jin (hjin@hust.edu.cn).
+
+Copyright (C) 2020, [STCS & CGCL](http://grid.hust.edu.cn/) and [Huazhong University of Science and Technology](https://www.hust.edu.cn/).
