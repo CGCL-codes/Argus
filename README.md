@@ -1,6 +1,6 @@
 # Argus
 
-Argus is a  novel  job scheduling scheme in RDMA-assisted big data processing system. Argus exploits the structure feature of stage dependency and prioritizes the stages whose completion can enable more schedulable stages. Comprehensive experiments using large-scale traces collected from real world show that Argus reduces job completion time and job makespan compared to existing schemes.
+Argus is a  novel  job scheduling scheme in RDMA-assisted big data processing system. Argus exploits the structure feature of stage dependency and prioritizes the stages whose completion can enable more schedulable stages. Comprehensive experiments using large-scale traces collected from real world show that compared to RDMA-Spark and Branch Scheduling (IWQoS'19), Argus reduces job completion time by 21% and 41%, respectively.
 
 ## Introduction
 
