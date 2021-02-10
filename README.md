@@ -23,7 +23,7 @@ According to our analysis, we verify that the root cause of computing resource u
 Argus contains two main processing module: influence assessment module and influence-aware scheduling module. When a job is submitted, the influence assessment module gets DAG structure of the job. Then it investigates the stage dependencies and assesses influence for every stage. It also maintains a parallel stage queue to store parallel stages waiting for scheduling. After pre-processed by the influence assessment module, the influence-aware scheduling module schedules stages according to their influences. Specifically,
 when some slots become available, the influence-aware scheduling module always firstly schedules tasks from the stage with the maximum influence. As the job runs, the influence assessment module also collects runtime states of tasks and dynamically adjusts the scheduling scheme. We also extend our design to further utilize available job profiles, e.g., stage duration, when the profile can be known apriori.
 
-# How to use?
+## How to use?
 
 We implement Argus on top of [RDMA-Spark](http://hibd.cse.ohio-state.edu/#spark) and [Apache Spark](http://spark.apache.org/) (verson 2.1.0). As we can not get the source code of RDMA-Spark, we implement our scheduling strategy atop Apache Spark and replace the corresponding jar files of RDMA-Spark with our jars, e.g. spark-core_2.11-2.1.0.jar. 
 
@@ -38,6 +38,12 @@ For ease of use, one can also download the compiled jar file spark-core_2.11-2.1
 
 ## Using Argus
 After building the core module, one can get spark-core_2.11-2.1.0.jar in terget file. Replace the same file in RDMA-Spark/jars/ with this file, and one can deploy the system refer to the RDMA-Spark document from [RDMA-Spark Userguide](http://hibd.cse.ohio-state.edu/static/media/rdma-spark/rdma-spark-0.9.5-userguide.pdf).
+
+## Publications
+If you want to know more detailed information, please refer to this paper:
+
+Sijie Wu, Hanhua Chen, Yonghui Wang, Hai Jin. "Argus: Efficient Job Scheduling in RDMA-assisted Big Data Processing." in Proceedings of 35th IEEE International Parallel & 
+Distributed Processing Symposium (IPDPS), 2021.
 
 ## Authors and Copyright
 Argus is developed in National Engineering Research Center for Big Data Technology and System, Cluster and Grid Computing Lab, Services Computing Technology and System Lab, School of Computer Science and Technology, Huazhong University of Science and Technology, Wuhan, China by Sijie Wu (wsj@hust.edu.cn), Hanhua Chen (chen@hust.edu.cn), Yonghui Wang (yhw@hust.edu.cn), Hai Jin (hjin@hust.edu.cn).
