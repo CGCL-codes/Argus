@@ -25,7 +25,8 @@ when some slots become available, the influence-aware scheduling module always f
 
 ## How to use?
 
-We implement Argus on top of [RDMA-Spark](http://hibd.cse.ohio-state.edu/#spark) and [Apache Spark](http://spark.apache.org/) (verson 2.1.0). As we can not get the source code of RDMA-Spark, we implement our scheduling strategy atop Apache Spark and replace the corresponding jar files of RDMA-Spark with our jars, e.g. spark-core_2.11-2.1.0.jar. 
+### Enviroment
+We implement Argus on top of [RDMA-Spark](http://hibd.cse.ohio-state.edu/#spark) and [Apache Spark](http://spark.apache.org/) (verson 2.1.0). We deploy the system on a cluster with 30 machines. Each machine in the cluster is equipped with two octa-core Intel 2.40 GHz processors, 64 GB memory, 256 GB HDD, an 1 Gbps NIC, and a Mellanox InfiniBand FDR 56 Gbps NIC. As we can not get the source code of RDMA-Spark, we implement our scheduling strategy atop Apache Spark and replace the corresponding jar files of RDMA-Spark with our jars, e.g. spark-core_2.11-2.1.0.jar. 
 
 ## Building Argus
 
